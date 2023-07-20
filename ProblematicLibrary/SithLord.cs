@@ -13,7 +13,8 @@ namespace ProblematicLibrary
     {
         public static void ExecuteOrder66()
         {
-            Process.Start("explorer.exe", $@"{Directory.GetCurrentDirectory()}\OldManCanoli.jpg");
+            // just gonna remove this
+            Console.WriteLine("Close me!");
         }
     }
 }

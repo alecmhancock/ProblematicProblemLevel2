@@ -54,20 +54,27 @@ namespace ProblematicProblemLevel2
             NewLine();
 
             PassMessage("Give me a number");
-            int x = GetUserNumber();
+            double x = GetUserNumber();
             NewLine();
 
             PassMessage("Give me another number");
-            int y = GetUserNumber();
+            double y = GetUserNumber();
             NewLine();
 
             PassMessage("I will now do the 4 standard math calculations on those 2 numbers");
             NewLine();
 
             PassMessage($"Addition: {x} + {y} = {calculator.Add(x, y)}");
-            PassMessage($"Subtraction: {x} + {y} = {calculator.Multiply(x, y)}");
-            PassMessage($"Multiplication: {x} + {y} = {calculator.Divide(x, y)}");
-            PassMessage($"Division: {x} + {y} = {calculator.Subtract(x, y)}");
+            PassMessage($"Multiplication: {x} * {y} = {calculator.Multiply(x, y)}");
+            if (y == 0)
+            {
+                PassMessage("You cannot divide by zero!");
+            }
+            else
+            {
+                PassMessage($"Division: {x} / {y} = {calculator.Divide(x, y)}");
+            }
+            PassMessage($"Subtraction: {x} - {y} = {calculator.Subtract(x, y)}");
             NewLine();
 
             PassMessage("Isn't math fun!", StatusCode.Success);            
